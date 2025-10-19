@@ -167,11 +167,11 @@ body {
     transform: scale(1.05);
 }
 
-/* 头像样式 */
+/* 头像样式 - 圆形设计 */
 .avatar {
-  width: 162px;
-  height: 100px;
-  border-radius: 4px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
   border: 3px solid rgba(255, 255, 255, 1);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   margin: 0 auto;
@@ -181,7 +181,8 @@ body {
   background-color: #f5f5f5;
   color: #333;
   font-size: 16px;
-  font-weight: bold;
+  overflow: hidden;
+  position: relative;
 }
 
 /* 信息部分样式 - 黄金比例长方形设计 */

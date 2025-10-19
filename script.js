@@ -17,54 +17,34 @@ function initAvatar() {
         currentAvatar.style.display = 'flex';
         currentAvatar.style.alignItems = 'center';
         currentAvatar.style.justifyContent = 'center';
-        currentAvatar.style.backgroundColor = '#f5f5f5';
         
-        // 从localStorage加载保存的头像
-        const savedAvatar = localStorage.getItem('userUploadedAvatar') || localStorage.getItem('userAvatar');
+        // 直接使用画师绘制的头像图片
+        currentAvatar.innerHTML = '';
         
-        if (savedAvatar) {
-            // 清除现有内容
-            currentAvatar.innerHTML = '';
-            
-            // 创建图片元素
-            const img = document.createElement('img');
-            img.src = savedAvatar;
-            img.alt = '用户头像';
-            img.style.width = '100%';
-            img.style.height = '100%';
-            img.style.objectFit = 'cover';
-            img.style.borderRadius = '50%'; // 确保图片也是圆形的
-            
-            // 添加图片到容器
-            currentAvatar.appendChild(img);
-            
-            // 移除背景色设置
-            currentAvatar.style.backgroundColor = 'transparent';
-        } else {
-            // 显示默认的提示文字
-            const defaultText = document.createElement('span');
-            defaultText.textContent = '个人头像';
-            defaultText.style.fontSize = '16px';
-            defaultText.style.color = '#333';
-            defaultText.style.textAlign = 'center';
-            
-            currentAvatar.innerHTML = '';
-            currentAvatar.appendChild(defaultText);
-        }
+        // 创建图片元素
+        const img = document.createElement('img');
+        // 使用目录中的圆形头像图片（假设136312218_p0_square1200.jpg是头像）
+        img.src = '136312218_p0_square1200.jpg';
+        img.alt = '用户头像 - 画师精心绘制';
+        img.style.width = '100%';
+        img.style.height = '100%';
+        img.style.objectFit = 'cover';
+        img.style.borderRadius = '50%'; // 确保图片也是圆形的
+        
+        // 添加图片到容器
+        currentAvatar.appendChild(img);
     }
 }
 
-// 加载保存的背景图片
+// 设置背景图片
 function loadBackground() {
-    // 从localStorage加载保存的背景
-    const savedBg = localStorage.getItem('userUploadedBg') || localStorage.getItem('userBackground');
-    
-    if (savedBg) {
-        document.body.style.backgroundImage = `url('${savedBg}')`;
-        document.body.style.backgroundSize = 'cover';
-        document.body.style.backgroundPosition = 'center';
-        document.body.style.backgroundAttachment = 'fixed';
-    }
+    // 直接使用画师绘制的背景图片
+    // 使用目录中的背景图片（假设BHGAICHFFEHDH-uoojNWNUL0.jpg是背景）
+    document.body.style.backgroundImage = "url('BHGAICHFFEHDH-uoojNWNUL0.jpg')";
+    document.body.style.backgroundSize = 'cover';
+    document.body.style.backgroundPosition = 'center';
+    document.body.style.backgroundAttachment = 'fixed';
+    document.body.style.backgroundRepeat = 'no-repeat';
 }
 
 // 页面加载完成后初始化
