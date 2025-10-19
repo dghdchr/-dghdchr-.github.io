@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人网站</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 左侧边栏 -->
+        <div class="sidebar">
+            <div class="avatar-container">
+                <div class="avatar" id="current-avatar">
+                    <!-- 头像将通过JavaScript动态加载 -->
+                </div>
+             </div>
+            
+            <div class="info-section">
+                <h1 class="site-title">个人网站</h1>
+                <div class="social-links">
+                    <a href="#" class="social-link">链接1</a>
+                    <a href="#" class="social-link">链接2</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 右侧主内容 -->
+        <div class="main-content">
+            <!-- 作品部分 -->
+            <section class="works-section">
+                <h2 class="section-title">作品</h2>
+                <div class="works-grid">
+                    <div class="work-item">
+                        <h3 class="work-title">作品1</h3>
+                        <p class="work-desc">作品描述</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- 留言板切换按钮 -->
+            <div class="guestbook-toggle-container">
+                <button id="guestbook-toggle" class="guestbook-toggle">
+                    <span>留言板</span>
+                </button>
+            </div>
+            
+            <!-- 留言板区域 -->
+            <section id="guestbook-section" class="guestbook-section hidden">
+                <h2 class="section-title">留言板</h2>
+                <form id="message-form" class="message-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="昵称" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="留言内容" required></textarea>
+                    </div>
+                    <button type="submit">提交</button>
+                </form>
+                <div class="messages-container">
+                    <div class="no-messages">暂无留言</div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

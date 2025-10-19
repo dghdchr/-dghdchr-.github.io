@@ -1,0 +1,410 @@
+/* 全局样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: #000000;
+    text-shadow: 0.5px 0.5px 1px rgba(255, 255, 255, 0.8);
+    background-color: transparent;
+}
+
+/* 主容器布局 */
+.container {
+    display: flex;
+    min-height: 100vh;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+/* 侧边栏样式 - 黄金比例长方形设计 */
+.sidebar {
+    width: 300px;
+    padding: 20px;
+    background-color: transparent;
+    border-radius: 4px;
+}
+
+/* 头像容器样式 - 圆形设计 */
+.avatar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+}
+
+/* 页面背景样式 */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: transparent;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+/* 主内容区域样式 - 确保完全透明 */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    background-color: transparent !important;
+}
+
+/* 动漫女孩头像预览 */
+.anime-girl-preview {
+    background-color: #f5f5f5;
+    position: relative;
+}
+
+.anime-girl-preview::before {
+    content: '';
+    position: absolute;
+    top: 12px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    background-color: #b54a8a;
+    border-radius: 30% 30% 50% 50%;
+    z-index: 1;
+}
+
+.anime-girl-preview::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 5px;
+    width: 30px;
+    height: 50px;
+    background-color: #b54a8a;
+    border-radius: 50% 50% 50% 50%;
+    z-index: 0;
+}
+
+/* 简约粉色头像预览 */
+.simple-pink-preview {
+    background-color: #ffebee;
+    position: relative;
+}
+
+.simple-pink-preview::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background-color: #f8bbd0;
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+}
+
+/* 表情符号头像预览 */
+.emoji-preview {
+    background-color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+}
+
+.emoji-preview::before {
+    content: '👧';
+}
+
+/* 渐变背景头像预览 */
+.gradient-preview {
+    background: linear-gradient(135deg, #f8bbd0, #e1bee7, #bbdefb);
+}
+/* 选择器按钮通用样式 - 黄金比例长方形设计 */
+.avatar-selector-buttons,
+.bg-selector-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#confirm-avatar-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s;
+    background-color: #f8bbd0;
+    color: #333;
+}
+
+#confirm-avatar-btn:hover {
+    background-color: #f48fb1;
+    transform: scale(1.05);
+}
+
+#cancel-avatar-btn,
+#cancel-bg-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s;
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+#cancel-avatar-btn:hover,
+#cancel-bg-btn:hover {
+    background-color: #bdbdbd;
+    transform: scale(1.05);
+}
+
+/* 头像样式 */
+.avatar {
+  width: 162px;
+  height: 100px;
+  border-radius: 4px;
+  border: 3px solid rgba(255, 255, 255, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5;
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* 信息部分样式 - 黄金比例长方形设计 */
+.info-section {
+    text-align: center;
+    background-color: transparent;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.site-title {
+    font-size: 24px;
+    margin-bottom: 15px;
+    background-color: transparent;
+    padding: 8px 15px;
+    border-radius: 4px;
+    display: inline-block;
+    transition: transform 0.3s;
+    color: #1a1a1a;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.9);
+}
+
+.site-title:hover {
+    transform: scale(1.05);
+}
+
+/* 社交链接样式 - 黄金比例长方形设计 */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.social-link {
+    text-decoration: none;
+    color: #000000;
+    font-size: 14px;
+    padding: 5px 10px;
+    background-color: transparent;
+    border-radius: 4px;
+    transition: all 0.3s;
+    font-weight: 500;
+    text-shadow: 0.5px 0.5px 1px rgba(255, 255, 255, 0.8);
+}
+
+.social-link:hover {
+    background-color: transparent;
+    transform: scale(1.05);
+}
+
+/* 主内容区域样式 - 已在前面定义为透明 */
+
+/* 区块标题样式 - 黄金比例长方形设计 */
+.section-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    background-color: transparent;
+    border-radius: 4px;
+    display: inline-block;
+    transition: transform 0.3s;
+    color: #1a1a1a;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.9);
+}
+
+.section-title:hover {
+    transform: scale(1.02);
+}
+
+/* 作品部分样式 */
+.works-section {
+    margin-bottom: 30px;
+}
+
+.works-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.work-item {
+    padding: 15px;
+    background-color: transparent;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.work-item:hover {
+    background-color: transparent;
+    transform: translateY(-5px) scale(1.02);
+}
+
+.work-title {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #000000;
+    font-weight: 600;
+    text-shadow: 0.5px 0.5px 1px rgba(255, 255, 255, 0.8);
+}
+
+.work-desc {
+    font-size: 14px;
+    color: #333333;
+    font-weight: 500;
+    text-shadow: 0.5px 0.5px 1px rgba(255, 255, 255, 0.8);
+}
+
+/* 留言板切换按钮 - 黄金比例长方形设计 */
+.guestbook-toggle-container {
+    margin: 30px 0;
+    text-align: center;
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.guestbook-toggle {
+    padding: 10px 20px;
+    background-color: #f8bbd0;
+    color: #333;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+.guestbook-toggle:hover {
+    background-color: #f48fb1;
+    transform: scale(1.05);
+}
+
+/* 留言板样式 - 黄金比例长方形设计 */
+.guestbook-section {
+    margin-top: 20px;
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.guestbook-section.hidden {
+    display: none;
+}
+
+/* 留言表单样式 */
+.message-form {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #000000;
+    transition: all 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #f8bbd0;
+    transform: scale(1.01);
+}
+
+.form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.message-form button {
+    padding: 10px 20px;
+    background-color: #f8bbd0;
+    color: #333;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.message-form button:hover {
+    background-color: #f48fb1;
+    transform: scale(1.05);
+}
+
+/* 留言列表样式 - 黄金比例长方形设计 */
+.messages-container {
+    margin-top: 20px;
+}
+
+.no-messages {
+    text-align: center;
+    color: #666666;
+    padding: 20px;
+    background-color: transparent;
+    border-radius: 4px;
+    font-weight: 500;
+    text-shadow: 0.5px 0.5px 1px rgba(255, 255, 255, 0.8);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: none;
+    }
+    
+    .works-grid {
+        grid-template-columns: 1fr;
+    }
+}
